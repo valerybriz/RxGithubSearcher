@@ -15,6 +15,10 @@ To use it is necessary to get a Github API TOKEN as explained in the following p
 
 And then change the TOKEN on the config.py file
 
+Run pip install -r requirements.txt to install the dependencies and run python server.py. 
+
+The app will be served at http://localhost:8080/
+
 
 
 
