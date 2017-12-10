@@ -2,9 +2,9 @@
 This script demonstrates how to use ReactiveX to process a data stream asynchronously using it to retrive repositories information
 
 ## packages
-tornado
-pycurl
-rx (RxPy)
+* tornado
+* pycurl
+* rx (RxPy)
 
 ## Usage
 Tested on Python 3.5+
