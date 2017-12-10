@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Github Searcher</title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+      <div class="page-header">
+        <h1>Github Repositories Searcher with RxPY</h1>
+        <p class="lead">You are searching repositories from Auth0, Mozilla, Adobe, Twitter and Nasa</p>
+      </div>
+      <form role="form">
+        <div class="form-group">
+          <label for="textInput">Enter keywords or a programming language to search on the repos</label>
+          <input type="text" id="textInput" class="form-control" placeholder="Query...">
+        </div>
+      </form>
+      <ul id="results"></ul>
+    </div>
+  </div>
+  <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="static/feeder.js"></script>
+</body>
+</html>
