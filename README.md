@@ -1,12 +1,12 @@
 # RxGithubSearcher
 This script demonstrates how to use ReactiveX to process a data stream asynchronously using it to retrive repositories information
 
-##[packages]
+## packages
 tornado
 pycurl
 rx (RxPy)
 
-##Usage
+## Usage
 Tested on Python 3.5+
 
 To use it you need to get a Github API TOKEN as explained in the following page:
