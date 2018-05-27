@@ -13,12 +13,8 @@ Tested on Python 3.5+
 To use it is necessary to get a Github API TOKEN as explained in the following page:
 [Creating a personal access Token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line)
 
-And then change the TOKEN on the config.py file
+And then change the `<TOKEN>` on the config.py file or define `GITHUB_API_TOKEN` environment variable.
 
-Run pip install -r requirements.txt to install the dependencies and run python server.py. 
+Run pip install -r requirements.txt to install the dependencies and run python server.py.
 
 The app will be served at http://localhost:8080/
-
-
-
-

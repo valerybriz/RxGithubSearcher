@@ -1,5 +1,14 @@
-TOKEN = <TOKEN>
-headers = {'Content-Type' : 'application/json' } #get the content in json format
-headers["Authorization"] = "token " + TOKEN #authentication for github
+import os
+
+TOKEN = os.getenv("GITHUB_API_TOKEN", "<TOKEN>")
 GITHUB_API_URL = "https://api.github.com"
-orgs = ["/twitter/repos", "/auth0/repos", "/nasa/repos", "/mozilla/repos", "/adobe/repos"]
+
+headers = {"Content-Type": "application/json" }
+headers["Authorization"] = "token " + TOKEN
+orgs = [
+    "/twitter/repos",
+    "/auth0/repos",
+    "/nasa/repos",
+    "/mozilla/repos",
+    "/adobe/repos",
+]

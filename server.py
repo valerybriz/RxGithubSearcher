@@ -17,14 +17,16 @@ from tornado.websocket import WebSocketHandler
 
 headers = conf.headers
 GIT_ORG = conf.GITHUB_API_URL+"/orgs"
-AsyncHTTPClient.configure("tornado.curl_httpclient.CurlAsyncHTTPClient")#configure the Httpclient as a curlAsyncHttpClient
+# Configure the Httpclient as a curlAsyncHttpClient
+AsyncHTTPClient.configure("tornado.curl_httpclient.CurlAsyncHTTPClient")
 
 class WSHandler(WebSocketHandler):
     orgs = conf.orgs
     def get_org_repos(self,org):
         """request the repos to the Github API"""
         http_client = AsyncHTTPClient()
-        response = http_client.fetch(GIT_ORG + org, headers=headers, method="GET") #asynchronous request for contet
+        # Asynchronous request for contet
+        response = http_client.fetch(GIT_ORG + org, headers=headers, method="GET")
         return response
 
     def check_origin(self, origin):
@@ -77,11 +79,11 @@ class WSHandler(WebSocketHandler):
     def get_info(self,req):
         """managing error codes and returning a list of json with content"""
         if req.code ==200:
-            jsresponse = json.loads(req.body)
+            jsresponse = json.loads(req.body.decode("utf-8"))
             return jsresponse
         elif req.code == 403:
             print("403 error")
-            jsresponse = json.loads(req.body)
+            jsresponse = json.loads(req.body.decode("utf-8"))
             return json.dumps("clear")
         else:
             return json.dumps("failed")
